@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/header/Header.js';
+import { BackgroundImage } from './App.styled.js'
+import homeBackground from './images/IMG_5553.JPG';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={};
+
+    this.isMobile = window.innerWidth <= 1024;
+  }
+
+  render() {
+    return (
+      <div>
+        <Header
+          isMobile={this.isMobile}
+        />
+        <BackgroundImage src={homeBackground} />
+      </div>
+    );
+  }
 }
 
 export default App;
