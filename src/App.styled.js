@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-const BackgroundImage = styled.img`
-  filter: grayscale(100%);
-  width: 100%;
+const AppWrapper = styled.div`
+  background-color: black;
+  height: 700px;
 `;
 
 export {
-  BackgroundImage
+  AppWrapper
 };

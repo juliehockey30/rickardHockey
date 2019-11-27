@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { AppWrapper } from './App.styled.js'
 import Header from './components/header/Header.js';
-import { BackgroundImage } from './App.styled.js'
-import homeBackground from './images/IMG_5553.JPG';
+import Home from './components/home/Home.js'
 
 class App extends Component {
   constructor(props){
@@ -13,12 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <AppWrapper>
         <Header
           isMobile={this.isMobile}
         />
-        <BackgroundImage src={homeBackground} />
-      </div>
+        <Home />
+      </AppWrapper>
     );
   }
 }
