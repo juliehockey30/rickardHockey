@@ -3,6 +3,11 @@ import styled from 'styled-components'
 const BackgroundImage = styled.img`
   filter: grayscale(100%);
   width: 100%;
+  margin-top: 15px;
+
+  @media(min-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 const HomeObjective = styled.div`
@@ -15,7 +20,7 @@ const HomeObjective = styled.div`
   position: absolute;
   right: 7%;
   text-align: center;
-  top: 280px;
+  top: 165px;
   width: 75%
 
   @media(min-width: 768px) {

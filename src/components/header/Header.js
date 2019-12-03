@@ -14,16 +14,16 @@ class Header extends Component {
       <HeaderWrapper isMobile={this.props.isMobile}>
       {this.props.isMobile ?
         <div>
-          <StyledLogo src={logo}/>
+          <StyledLogo src={logo} onClick={() => {window.location.pathname = '/'}}/>
           <CustomHamburgerMenu />
         </div>
       :
       <NavMenuWrapper>
-        <NavMenuItem onClick={() => {window.location.pathname = '/'}}>HOME</NavMenuItem>
-        <NavMenuItem onClick={() => {window.location.pathname = '/about'}}>ABOUT ME</NavMenuItem>
-        <StyledLogo src={logo} />
+        <NavMenuItem onClick={() => {window.location.pathname = '/about'}}>ABOUT COACH KAREN</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/testimonials'}}>TESTIMONIALS</NavMenuItem>
+        <StyledLogo src={logo} onClick={() => {window.location.pathname = '/'}} />
         <NavMenuItem onClick={() => {window.location.pathname = '/camps'}}>CAMPS & CLINICS</NavMenuItem>
-        <NavMenuItem onClick={() => {window.location.pathname = '/contact'}}>CONTACT ME</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/contact'}}>CONTACT</NavMenuItem>
       </NavMenuWrapper>
       }
       </HeaderWrapper>

@@ -39,10 +39,10 @@ class CustomHamburgerMenu extends Component {
         </HamburgerWrapper>
         {this.state.hamburgerMenuOpen ?
           <HamburgerMenuItemWrapper>
-            <HamburgerMenuItem>HOME</HamburgerMenuItem>
-            <HamburgerMenuItem>ABOUT ME</HamburgerMenuItem>
-            <HamburgerMenuItem>CAMPS & CLINICS</HamburgerMenuItem>
-            <HamburgerMenuItem>CONTACT ME</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => {window.location.pathname = '/about'}}>ABOUT COACH K.</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => {window.location.pathname = '/'}}>TESTIMONIALS</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => {window.location.pathname = '/camps'}}>CAMPS & CLINICS</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => {window.location.pathname = '/contact'}}>CONTACT ME</HamburgerMenuItem>
           </HamburgerMenuItemWrapper>
           : null
         }

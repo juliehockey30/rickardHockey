@@ -14,6 +14,7 @@ const HeaderWrapper = styled.div`
 const StyledLogo = styled.img`
   height: 40px;
   margin: 4px auto;
+  cursor: pointer;
 
   @media(min-width: 768px) {
     height: 90px;
@@ -33,6 +34,12 @@ const NavMenuItem = styled.div`
   cursor: pointer;
   margin: 20px;
   font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+
+  &:hover {
+    color: #67bbf0;
+  }
 `;
 
 export{

@@ -13,6 +13,7 @@ class Home extends Component {
       <>
         <BackgroundImage src={homeBackground} />
         <HomeObjective>
+          Here is your business statement. Maybe something like:
           Rickard Hockey offers high intensity camps, clinics, and private lessons for hockey players of all ages and all skill levels.
         </HomeObjective>
       </>
