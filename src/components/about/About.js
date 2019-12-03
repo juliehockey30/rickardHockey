@@ -19,7 +19,7 @@ class About extends Component {
           After her collegiate career, Rickard went on to earn her MBA and Master of Sports Administration from Ohio University before landing in Dallas, TX where she started coaching with the Dallas Stars Elite and worked full time with the Dallas Mavericks NBA team.
           <br />
           <br />
-          Rickard moved to Colorado in 2015 has coached at multiple USA Hockey National Player Development camps, holds her USA Hockey Level Four CEP certificate, and is currently the Head Coach of the 14U and 16U girls Tier I Team Colorado teams.
+          Rickard moved to Colorado in 2015, has coached at multiple USA Hockey National Player Development camps, holds her USA Hockey Level Four CEP certificate, and is currently the Head Coach of the 14U and 16U girls Tier I Team Colorado teams.
         </Bio>
       </Wrapper>
     );
