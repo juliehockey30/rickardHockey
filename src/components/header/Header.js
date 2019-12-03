@@ -19,11 +19,11 @@ class Header extends Component {
         </div>
       :
       <NavMenuWrapper>
-        <NavMenuItem>HOME</NavMenuItem>
-        <NavMenuItem>ABOUT ME</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/'}}>HOME</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/about'}}>ABOUT ME</NavMenuItem>
         <StyledLogo src={logo} />
-        <NavMenuItem>CAMPS & CLINICS</NavMenuItem>
-        <NavMenuItem>CONTACT ME</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/camps'}}>CAMPS & CLINICS</NavMenuItem>
+        <NavMenuItem onClick={() => {window.location.pathname = '/contact'}}>CONTACT ME</NavMenuItem>
       </NavMenuWrapper>
       }
       </HeaderWrapper>

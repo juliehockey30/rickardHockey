@@ -12,12 +12,20 @@ class App extends Component {
   }
 
   render() {
+    let display;
+
+    if(window.location.pathname === '/') {
+      display = (<Home />)
+    } else if(window.location.pathname === '/about') {
+      display = (<div>Test</div>)
+    }
+
     return (
       <AppWrapper>
         <Header
           isMobile={this.isMobile}
         />
-        <Home />
+        {display}
       </AppWrapper>
     );
   }

@@ -30,6 +30,7 @@ const NavMenuWrapper = styled.div`
 
 const NavMenuItem = styled.div`
   color: white;
+  cursor: pointer;
   margin: 20px;
   font-weight: bold;
 `;
