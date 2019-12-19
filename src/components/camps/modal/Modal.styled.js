@@ -1,38 +1,11 @@
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  margin-top: 70px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 0;
-
-  @media(min-width: 768px) {
-    flex-direction: row;
-    margin-top: 100px;
-    padding-top: 60px;
-  }
-`;
-
-const Header = styled.h1`
-  position: absolute;
-  top: 100px;
-  margin-left: 22%;
-`;
-
-const Subheader = styled.h3`
-  position: relative;
-  top: 150px;
-  margin-left: 27%;
-`;
-
 const ModalOverLay = styled.div`
   position: fixed;
   z-index: 1;
   padding-top: 100px;
   left: 0;
-  top: 0;
+  top: -40px;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.4);
@@ -110,9 +83,6 @@ const ButtonWrapper = styled.div`
 `;
 
 export{
-  Wrapper,
-  Header,
-  Subheader,
   ModalOverLay,
   ModalContent,
   CloseIcon,

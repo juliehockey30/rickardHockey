@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Wrapper,
-  ModalOverLay,
-  ModalContent,
-  CloseIcon,
-  ModalTitle,
-  ModalDescription,
-  ModalLabel,
-  ModalValue,
-  CostExplination,
-  MetaDataWrapper,
-  ButtonWrapper,
-} from './Camps.styled.js';
+import { Wrapper, Header, Subheader } from './Camps.styled.js';
+import Modal from './modal/Modal.js'
 import CampCard from './campCard/CampCard.js'
 import { RegisterButton } from './campCard/CampCard.styled.js';
 import * as firebase from 'firebase';
@@ -32,10 +21,6 @@ class Camps extends Component {
     this.hideModal = this.hideModal.bind(this);
     this.getCamps = this.getCamps.bind(this);
     this.renderCampCards = this.renderCampCards.bind(this);
-
-    // window.onclick = e => {
-    //   console.log(e.target);
-    // }
   }
 
   componentWillMount() {
@@ -80,38 +65,19 @@ class Camps extends Component {
     }
 
     return (
-      <Wrapper>
-        {this.state.showModal ?
-          <ModalOverLay>
-            <ModalContent>
-            <CloseIcon onClick={this.hideModal}>X</CloseIcon>
-              <ModalTitle>{this.state.selectedCamp.name}</ModalTitle>
-              <ModalDescription>{this.state.selectedCamp.description}</ModalDescription>
-              <MetaDataWrapper>
-                <ModalLabel>DATES: </ModalLabel>
-                <ModalValue>{this.state.selectedCamp.dates}</ModalValue>
-              </MetaDataWrapper>
-              <MetaDataWrapper>
-                <ModalLabel>TIMES: </ModalLabel>
-                <ModalValue>{this.state.selectedCamp.times}</ModalValue>
-              </MetaDataWrapper>
-              <MetaDataWrapper>
-                <ModalLabel>LOCATION: </ModalLabel>
-                <ModalValue>{this.state.selectedCamp.location}</ModalValue>
-              </MetaDataWrapper>
-              <MetaDataWrapper>
-                <ModalLabel>COST: </ModalLabel>
-                <ModalValue>{this.state.selectedCamp.cost}</ModalValue>
-              <CostExplination>{this.state.selectedCamp.costDescription}</CostExplination>
-              </MetaDataWrapper>
-              <ButtonWrapper>
-                <RegisterButton>REGISTER NOW!</RegisterButton>
-              </ButtonWrapper>
-            </ModalContent>
-          </ModalOverLay>
-        : null}
-        {this.renderCampCards()}
-      </Wrapper>
+      <div>
+        <Header>Click on any camp to view more details about it!</Header>
+        <Subheader>If you have any questions, please contact Coach Karen directly.</Subheader>
+        <Wrapper>
+          {this.state.showModal ?
+            <Modal
+              hideModal={this.hideModal}
+              selectedCamp={this.state.selectedCamp}
+            />
+          : null}
+          {this.renderCampCards()}
+        </Wrapper>
+      </div>
     );
   }
 }
