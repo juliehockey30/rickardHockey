@@ -17,14 +17,33 @@ const Wrapper = styled.div`
 
 const Header = styled.h1`
   position: absolute;
-  top: 100px;
-  margin-left: 22%;
+  top: 60px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 22px;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    top: 110px;
+    margin-left: 22%;
+    font-size: 32px;
+  }
 `;
 
 const Subheader = styled.h3`
   position: relative;
-  top: 150px;
-  margin-left: 27%;
+  padding-bottom: 50px;
+  top: 120px;
+  margin-left: 8%;
+  margin-right: 8%;
+  font-size: 16px;
+  text-align: center;
+
+  @media(min-width: 768px) {
+    top: 150px;
+    margin-left: 5%;
+    font-size: 24px;
+  }
 `;
 
 const ModalOverLay = styled.div`

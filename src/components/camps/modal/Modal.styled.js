@@ -18,20 +18,31 @@ const ModalContent = styled.div`
   left: 1%;
   width: 90%;
   padding: 12px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 
   @media(min-width: 768px) {
     width: 70%;
     left: 15%;
     top: 150px;
     padding: 24px;
+    max-height: calc(100vh - 210px);
   }
 `;
 
 const CloseIcon = styled.div`
   text-align: right;
-  margin: 12px 12px 0 0;
+  margin: 0 12px 0 0;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  position: fixed;
+  right: 135px;
+  width: 73%;
+  background-color: white;
+  top: 113px;
+  height: 40px;
+  line-height: 40px;
 `;
 
 const ModalTitle = styled.div`
@@ -40,6 +51,7 @@ const ModalTitle = styled.div`
   color: rgb(103, 187, 240);
   font-size: 48px;
   font-weight: bold;
+  margin-top: 20px;
 `;
 
 const ModalDescription = styled.div`

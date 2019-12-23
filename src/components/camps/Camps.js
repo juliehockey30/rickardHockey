@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Wrapper, Header, Subheader } from './Camps.styled.js';
 import Modal from './modal/Modal.js'
 import CampCard from './campCard/CampCard.js'
-import { RegisterButton } from './campCard/CampCard.styled.js';
 import * as firebase from 'firebase';
 
 class Camps extends Component {
