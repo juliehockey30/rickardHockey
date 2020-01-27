@@ -13,6 +13,7 @@ class CampCard extends Component {
     this.state={};
 
     this.showModal = this.showModal.bind(this);
+    this.registerClick = this.registerClick.bind(this);
   }
 
   showModal() {
@@ -22,6 +23,9 @@ class CampCard extends Component {
   }
 
   registerClick(event) {
+    window.sessionStorage.setItem('selectedCamp', this.props.camp.name);
+    window.sessionStorage.setItem('selectedCampPrice', this.props.camp.price);
+    window.sessionStorage.setItem('selectedCampGoaliePrice', this.props.camp.goaliePrice);
     window.location.pathname = '/register';
   }
 

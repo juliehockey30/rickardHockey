@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { AppWrapper } from './App.styled.js'
 import Header from './components/header/Header.js';
-import Home from './components/home/Home.js'
-import About from './components/about/About.js'
-import Camps from './components/camps/Camps.js'
+import Home from './components/home/Home.js';
+import About from './components/about/About.js';
+import Camps from './components/camps/Camps.js';
+import RegisterCamper from './components/register/RegisterCamper.js';
 
 class App extends Component {
   constructor(props){
@@ -22,15 +23,15 @@ class App extends Component {
       display = (<About />)
     } else if(window.location.pathname === '/camps') {
       display = (<Camps />)
+    } else if(window.location.pathname === '/register') {
+      display = (<RegisterCamper />)
     }
 
     return (
       <AppWrapper>
-      {window.location.pathname !== '/register' ?
         <Header
           isMobile={this.isMobile}
         />
-      : null}
         {display}
       </AppWrapper>
     );

@@ -27,11 +27,7 @@ class Camps extends Component {
   }
 
   showModal(camp) {
-    // console.log("what's this???", window.event.target.innerText);
-    // debugger
-    // if(window.event.target.innerText !== 'REGISTER NOW') {
       this.setState({ showModal: true, selectedCamp: camp });
-    // }
   }
 
   hideModal() {
