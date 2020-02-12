@@ -47,6 +47,7 @@ class Camps extends Component {
     return this.state.camps.map((camp) =>
       <CampCard
         camp={camp}
+        setPage={this.props.setPage}
         showModal={this.showModal}
       />
     );

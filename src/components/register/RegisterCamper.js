@@ -4,7 +4,7 @@ import InfoForm from './infoForm/InfoForm.js';
 class RegisterCamper extends Component {
   render() {
     return (
-        <InfoForm />
+        <InfoForm setPage={this.props.setPage}/>
     );
   }
 }

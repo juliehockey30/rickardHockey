@@ -9,28 +9,37 @@ import RegisterCamper from './components/register/RegisterCamper.js';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state={};
+    this.state={
+      page: '/'
+    };
 
     this.isMobile = window.innerWidth <= 1024;
+
+    this.setPage = this.setPage.bind(this);
+  }
+
+  setPage(page) {
+    this.setState({ page });
   }
 
   render() {
     let display;
 
-    if(window.location.pathname === '/') {
+    if(this.state.page === '/') {
       display = (<Home />)
-    } else if(window.location.pathname === '/about') {
+    } else if(this.state.page === 'about') {
       display = (<About />)
-    } else if(window.location.pathname === '/camps') {
-      display = (<Camps />)
-    } else if(window.location.pathname === '/register') {
-      display = (<RegisterCamper />)
+    } else if(this.state.page === 'camps') {
+      display = (<Camps setPage={this.setPage} />)
+    } else if(this.state.page === 'register') {
+      display = (<RegisterCamper setPage={this.setPage} />)
     }
 
     return (
       <AppWrapper>
         <Header
           isMobile={this.isMobile}
+          setPage={this.setPage}
         />
         {display}
       </AppWrapper>

@@ -26,7 +26,7 @@ class CampCard extends Component {
     window.sessionStorage.setItem('selectedCamp', this.props.camp.name);
     window.sessionStorage.setItem('selectedCampPrice', this.props.camp.price);
     window.sessionStorage.setItem('selectedCampGoaliePrice', this.props.camp.goaliePrice);
-    window.location.pathname = '/register';
+    this.props.setPage('register');
   }
 
   render() {

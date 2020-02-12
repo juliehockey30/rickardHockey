@@ -38,25 +38,31 @@ const InputWrapper = styled.div`
 
 const FlexInput = styled.input`
   background-color: ${props => props.disabled ? '#cfcfcf' : 'white'};
+  border: 1px solid grey;
   font-size: 14px;
   height: 30px;
   margin: 12px;
   padding: 8px;
+  text-align: center;
   width: 40%;
 `;
 
 const FullWidthInput = styled.input`
+  border: 1px solid grey;
   font-size: 14px;
   height: 30px;
   margin: 12px;
   padding: 8px;
+  text-align: center;
   width: 75%;
 `;
 
 const PositionSelect = styled.select`
+  border: 1px solid grey;
   font-size: 14px;
   height: 45px;
   margin: 12px;
+  text-align: center;
   width: 43%;
 `;
 
