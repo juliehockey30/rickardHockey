@@ -8,10 +8,15 @@ const http = require('http'),
     path = require('path');
 
 const dev = app.get('env') !== 'production';
+const corsOptions = {
+        methods: ['GET', 'PUT', 'POST'],
+        origin: '*',
+        allowedHeaders: ['Content-Type']
+    };
 
 app.use(express.json());
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(compression())
 app.use(express.static(path.resolve(__dirname, 'build')))
