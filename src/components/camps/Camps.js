@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Background, Wrapper, CampHeader, Header, Subheader } from './Camps.styled.js';
+import {
+  Background,
+  Wrapper,
+  CampHeader,
+  Header,
+  Subheader,
+  LoaderWrapper,
+  StyledLoader,
+} from './Camps.styled.js';
 import Modal from './modal/Modal.js'
 import CampCard from './campCard/CampCard.js'
 import * as firebase from 'firebase';
@@ -67,7 +75,9 @@ class Camps extends Component {
   render() {
     if(this.state.loading){
       return (
-        <div>I AM LOADING</div>
+        <LoaderWrapper>
+          <StyledLoader src="https://media1.tenor.com/images/e68cc33983bed347554ce23fe2bd08bd/tenor.gif" />
+        </LoaderWrapper>
       );
     }
 

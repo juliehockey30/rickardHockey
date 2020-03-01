@@ -134,6 +134,17 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `;
 
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 200px;
+`;
+
+const StyledLoader = styled.img`
+  height: 150px;
+  width: 200px;
+`;
+
 export{
   Background,
   Wrapper,
@@ -150,4 +161,6 @@ export{
   CostExplination,
   MetaDataWrapper,
   ButtonWrapper,
+  LoaderWrapper,
+  StyledLoader,
 };
