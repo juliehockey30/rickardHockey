@@ -23,9 +23,9 @@ class Modal extends Component {
   }
 
   registerClick(event) {
-    // window.sessionStorage.setItem('selectedCamp', this.props.camp.name);
-    // window.sessionStorage.setItem('selectedCampPrice', this.props.camp.price);
-    // window.sessionStorage.setItem('selectedCampGoaliePrice', this.props.camp.goaliePrice);
+    window.sessionStorage.setItem('selectedCamp', this.props.selectedCamp.name);
+    window.sessionStorage.setItem('selectedCampPrice', this.props.selectedCamp.price);
+    window.sessionStorage.setItem('selectedCampGoaliePrice', this.props.selectedCamp.goaliePrice);
     this.props.setModalContent('register');
     const element = document.getElementById('modalContent')
     element.style.transform = 'transformY(180deg)';
