@@ -20,6 +20,11 @@ class CustomHamburgerMenu extends Component {
     this.setState({ hamburgerMenuOpen: !this.state.hamburgerMenuOpen})
   }
 
+  hamburgerMenuOnClick(element) {
+    this.props.scrollToElement(element);
+    this.toggleHamburgerMenu();
+  };
+
   render() {
     return (
       <div>
@@ -39,10 +44,10 @@ class CustomHamburgerMenu extends Component {
         </HamburgerWrapper>
         {this.state.hamburgerMenuOpen ?
           <HamburgerMenuItemWrapper>
-            <HamburgerMenuItem onClick={() => {window.location.pathname = '/about'}}>ABOUT COACH K.</HamburgerMenuItem>
-            <HamburgerMenuItem onClick={() => {window.location.pathname = '/'}}>TESTIMONIALS</HamburgerMenuItem>
-            <HamburgerMenuItem onClick={() => {window.location.pathname = '/camps'}}>CAMPS & CLINICS</HamburgerMenuItem>
-            <HamburgerMenuItem onClick={() => {window.location.pathname = '/contact'}}>CONTACT ME</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => this.hamburgerMenuOnClick('about')}>ABOUT COACH K</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => this.hamburgerMenuOnClick('camps')}>CAMPS & CLINICS</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => this.hamburgerMenuOnClick('testimonials')}>TESTIMONIALS</HamburgerMenuItem>
+            <HamburgerMenuItem onClick={() => this.hamburgerMenuOnClick('contact')}>CONTACT</HamburgerMenuItem>
           </HamburgerMenuItemWrapper>
           : null
         }

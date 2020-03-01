@@ -1,47 +1,53 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+const Background = styled.div`
+  padding: 32px 0;
+`;
 
 const Wrapper = styled.div`
-  margin-top: 70px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 0;
 
   @media(min-width: 768px) {
     flex-direction: row;
-    margin-top: 100px;
-    padding-top: 60px;
   }
 `;
 
-const Header = styled.h1`
-  position: absolute;
-  top: 60px;
-  margin-left: 5%;
-  margin-right: 5%;
+const CampHeader = styled.p`
+  border: 6px solid #67bbf0;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 24px auto;
+  max-width: 275px;
+  padding: 12px;
+  text-align: center;
+  width: max-content;
+
+  @media(min-width: 768px) {
+    font-size: 54px;
+    margin: 0 auto 48px auto;
+    max-width: unset;
+  }
+`;
+
+const Header = styled.div`
   font-size: 22px;
+  font-weight: bold;
   text-align: center;
 
   @media(min-width: 768px) {
-    top: 110px;
-    margin-left: 22%;
     font-size: 32px;
   }
 `;
 
-const Subheader = styled.h3`
-  position: relative;
-  padding-bottom: 50px;
-  top: 120px;
-  margin-left: 8%;
-  margin-right: 8%;
+const Subheader = styled.p`
   font-size: 16px;
+  font-weight: bold;
   text-align: center;
 
   @media(min-width: 768px) {
-    top: 150px;
-    margin-left: 5%;
     font-size: 24px;
   }
 `;
@@ -129,7 +135,9 @@ const ButtonWrapper = styled.div`
 `;
 
 export{
+  Background,
   Wrapper,
+  CampHeader,
   Header,
   Subheader,
   ModalOverLay,

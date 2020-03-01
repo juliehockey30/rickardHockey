@@ -4,44 +4,43 @@ import Header from './components/header/Header.js';
 import Home from './components/home/Home.js';
 import About from './components/about/About.js';
 import Camps from './components/camps/Camps.js';
-import RegisterCamper from './components/register/RegisterCamper.js';
+import Testimonials from './components/testimonials/Testimonials.js';
+import Contact from './components/contact/Contact.js';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state={
-      page: '/'
-    };
-
     this.isMobile = window.innerWidth <= 1024;
 
-    this.setPage = this.setPage.bind(this);
+    this.scrollToElement = this.scrollToElement.bind(this);
   }
 
-  setPage(page) {
-    this.setState({ page });
+  scrollToElement(id) {
+    const element = document.getElementById(id);
+    const offset = window.innerWidth <= 768 ? 50 : 100;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 
   render() {
-    let display;
-
-    if(this.state.page === '/') {
-      display = (<Home />)
-    } else if(this.state.page === 'about') {
-      display = (<About />)
-    } else if(this.state.page === 'camps') {
-      display = (<Camps setPage={this.setPage} />)
-    } else if(this.state.page === 'register') {
-      display = (<RegisterCamper setPage={this.setPage} />)
-    }
-
     return (
-      <AppWrapper>
+      <AppWrapper id="wrapper">
         <Header
           isMobile={this.isMobile}
-          setPage={this.setPage}
+          scrollToElement={this.scrollToElement}
         />
-        {display}
+        <Home />
+        <About />
+        <Camps setPage={this.setPage} />
+        <Testimonials />
+        <Contact />
       </AppWrapper>
     );
   }

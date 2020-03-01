@@ -20,7 +20,7 @@ const HomeObjective = styled.div`
   position: absolute;
   right: 7%;
   text-align: center;
-  top: 165px;
+  top: 140px;
   width: 75%
 
   @media(min-width: 768px) {

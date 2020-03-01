@@ -10,13 +10,12 @@ class Home extends Component {
 
   render() {
     return (
-      <>
+      <div id="home">
         <BackgroundImage src={homeBackground} />
         <HomeObjective>
-          Here is your business statement. Maybe something like:
-          Rickard Hockey offers high intensity camps, clinics, and private lessons for hockey players of all ages and all skill levels.
+          Rickard Hockey offers high intensity camps, clinics, and lessons with the intention of providing the best possible environment for your athlete to develop her skills, talents, and athleticism while enjoying the sport she loves.
         </HomeObjective>
-      </>
+      </div>
     );
   }
 }

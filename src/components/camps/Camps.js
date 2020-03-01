@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Wrapper, Header, Subheader } from './Camps.styled.js';
+import { Background, Wrapper, CampHeader, Header, Subheader } from './Camps.styled.js';
 import Modal from './modal/Modal.js'
 import CampCard from './campCard/CampCard.js'
 import * as firebase from 'firebase';
@@ -11,7 +11,8 @@ class Camps extends Component {
       showModal: false,
       camps: [],
       loading: true,
-      selectedCamp: {}
+      selectedCamp: {},
+      modalContent: 'campDetails'
     };
 
     this.elementClicked = false
@@ -20,6 +21,7 @@ class Camps extends Component {
     this.hideModal = this.hideModal.bind(this);
     this.getCamps = this.getCamps.bind(this);
     this.renderCampCards = this.renderCampCards.bind(this);
+    this.setModalContent = this.setModalContent.bind(this);
   }
 
   componentWillMount() {
@@ -30,8 +32,16 @@ class Camps extends Component {
       this.setState({ showModal: true, selectedCamp: camp });
   }
 
+  setModalContent(content){
+    if(!this.state.showModal) {
+      this.setState({ showModal: true, modalContent: content})
+    } else {
+      this.setState({ modalContent: content })
+    }
+  }
+
   hideModal() {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false, modalContent: 'campDetails' });
   }
 
   getCamps() {
@@ -49,6 +59,7 @@ class Camps extends Component {
         camp={camp}
         setPage={this.props.setPage}
         showModal={this.showModal}
+        setModalContent={this.setModalContent}
       />
     );
   }
@@ -61,19 +72,22 @@ class Camps extends Component {
     }
 
     return (
-      <div>
+      <Background id="camps">
+        <CampHeader>AVAILABLE CAMPS & CLINICS</CampHeader>
         <Header>Click on any camp to view more details about it!</Header>
         <Subheader>If you have any questions, please contact Coach Karen directly.</Subheader>
         <Wrapper>
           {this.state.showModal ?
             <Modal
               hideModal={this.hideModal}
+              modalContent={this.state.modalContent}
               selectedCamp={this.state.selectedCamp}
+              setModalContent={this.setModalContent}
             />
           : null}
           {this.renderCampCards()}
         </Wrapper>
-      </div>
+      </Background>
     );
   }
 }

@@ -3,15 +3,8 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  margin-top: 0;
   padding-top: 0;
-  width: 100%;
-
-  @media(min-width: 768px) {
-    margin-top: 100px;
-    padding-top: 60px;
-    width: 50%;
-  }
 `;
 
 const FormWrapper = styled.div`
@@ -66,6 +59,24 @@ const PositionSelect = styled.select`
   width: 43%;
 `;
 
+const PaymentWrapper = styled.div`
+  margin-top: 12px;
+`;
+
+const PayWithWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+`;
+
+const VenmoLogo = styled.img`
+  width: 100px;
+`;
+
 export {
   Wrapper,
   FormWrapper,
@@ -75,4 +86,7 @@ export {
   FlexInput,
   FullWidthInput,
   PositionSelect,
+  PaymentWrapper,
+  PayWithWrapper,
+  VenmoLogo,
 }

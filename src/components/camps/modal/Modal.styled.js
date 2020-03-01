@@ -1,4 +1,14 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const flip = keyframes`
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+`;
 
 const ModalOverLay = styled.div`
   background-color: rgba(0,0,0,0.4);
@@ -12,6 +22,7 @@ const ModalOverLay = styled.div`
 `;
 
 const ModalContent = styled.div`
+  /* animation: ${flip} 2s linear infinite; */
   background-color: white;
   border: 3px solid black;
   left: 1%;
@@ -39,10 +50,16 @@ const CloseIcon = styled.div`
   line-height: 40px;
   margin: 0 12px 0 0;
   position: fixed;
-  right: 135px;
+  right: 5px;
   text-align: right;
-  top: 113px;
-  width: 73%;
+  top:65px;
+  width: 93%;
+
+  @media(min-width: 768px) {
+    right: 130px;
+    top: 113px;
+    width: 73%;
+  }
 `;
 
 const ModalTitle = styled.div`
