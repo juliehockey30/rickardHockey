@@ -52,6 +52,7 @@ const Image = styled.img`
 
   @media(min-width: 768px) {
     max-width: 500px;
+    max-height: 350px;
   }
 `;
 
