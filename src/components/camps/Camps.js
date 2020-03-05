@@ -7,6 +7,7 @@ import {
   Subheader,
   LoaderWrapper,
   StyledLoader,
+  CampCardsWrapper,
 } from './Camps.styled.js';
 import Modal from './modal/Modal.js'
 import CampCard from './campCard/CampCard.js'
@@ -95,7 +96,9 @@ class Camps extends Component {
               setModalContent={this.setModalContent}
             />
           : null}
-          {this.renderCampCards()}
+          <CampCardsWrapper>
+            {this.renderCampCards()}
+          </CampCardsWrapper>
         </Wrapper>
       </Background>
     );

@@ -145,6 +145,12 @@ const StyledLoader = styled.img`
   width: 200px;
 `;
 
+const CampCardsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 export{
   Background,
   Wrapper,
@@ -163,4 +169,5 @@ export{
   ButtonWrapper,
   LoaderWrapper,
   StyledLoader,
+  CampCardsWrapper,
 };
