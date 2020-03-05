@@ -2,7 +2,7 @@
   "name": "rickard-hockey",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://juliehockey30.github.io/rickardHockey/",
+  "homepage": "https://juliehockey30.github.io/rickardHockey",
   "dependencies": {
     "@types/react-stripe-elements": "^6.0.3",
     "@types/stripe": "^7.13.20",
