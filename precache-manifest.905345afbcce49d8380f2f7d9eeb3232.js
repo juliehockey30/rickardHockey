@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bfb29270603bf6573343e7248235ec7",
+    "revision": "0e53fb51f2372ce0dea094e60f3c75b5",
     "url": "/rickardHockey/index.html"
   },
   {
-    "revision": "9b2c0a58aca2ebdd4567",
+    "revision": "c4fd3161223ecda307f6",
     "url": "/rickardHockey/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "f1b74ccc2ce77be7d811",
-    "url": "/rickardHockey/static/js/2.620c8ab1.chunk.js"
+    "revision": "6db9bae4a899fd5b7c2d",
+    "url": "/rickardHockey/static/js/2.1bca8f53.chunk.js"
   },
   {
-    "revision": "9b2c0a58aca2ebdd4567",
-    "url": "/rickardHockey/static/js/main.bda3e76a.chunk.js"
+    "revision": "170392c3acad6bbffec743442b1d0ac3",
+    "url": "/rickardHockey/static/js/2.1bca8f53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ec7314ca5507842b228",
-    "url": "/rickardHockey/static/js/runtime-main.2e82a0cd.js"
+    "revision": "c4fd3161223ecda307f6",
+    "url": "/rickardHockey/static/js/main.c772e20d.chunk.js"
+  },
+  {
+    "revision": "64e3e982f60a25731d43",
+    "url": "/rickardHockey/static/js/runtime-main.d5b51afc.js"
   },
   {
     "revision": "77e8cf6183150e905b43ac7935314239",
