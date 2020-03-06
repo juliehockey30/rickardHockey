@@ -1,12 +1,10 @@
 {
   "name": "rickard-hockey",
-  "homepage": "http://juliehockey30.github.io/rickardHockey",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
     "firebase": "^7.6.1",
-    "gh-pages": "^2.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hamburger-menu": "^1.1.1",
