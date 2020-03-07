@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -25,7 +25,7 @@ const CampHeader = styled.p`
   text-align: center;
   width: max-content;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     font-size: 54px;
     margin: 0 auto 48px auto;
     max-width: unset;
@@ -37,7 +37,7 @@ const Header = styled.div`
   font-weight: bold;
   text-align: center;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     font-size: 32px;
   }
 `;
@@ -47,7 +47,7 @@ const Subheader = styled.p`
   font-weight: bold;
   text-align: center;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     font-size: 24px;
   }
 `;
@@ -71,7 +71,7 @@ const ModalContent = styled.div`
   width: 90%;
   padding: 12px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     width: 70%;
     left: 15%;
     top: 150px;
@@ -150,7 +150,7 @@ const CampCardsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     flex-direction: row;
   }
 `;

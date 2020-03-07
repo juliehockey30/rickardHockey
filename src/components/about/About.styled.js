@@ -16,7 +16,7 @@ const AboutHeader = styled.p`
   text-align: center;
   width: max-content;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     font-size: 54px;
     margin: 0 auto 48px auto;
   }
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -38,7 +38,7 @@ const Bio = styled.div`
   width: 100%;
   font-weight: bold;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     width: 40%;
   }
 `;
@@ -50,7 +50,7 @@ const Image = styled.img`
   max-width: 100%;
   margin-bottom: 30px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     max-width: 500px;
     max-height: 350px;
   }

@@ -16,7 +16,7 @@ const StyledLogo = styled.img`
   margin: 4px auto;
   cursor: pointer;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     height: 90px;
     margin: 0;
   }

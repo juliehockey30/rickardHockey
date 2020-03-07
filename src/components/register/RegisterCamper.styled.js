@@ -18,7 +18,7 @@ const CampName = styled.h1`
   text-align: center;
   margin-top: 30px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     margin-top: 20px;
   }
 `;
@@ -33,7 +33,7 @@ const InputWrapper = styled.div`
   flex-direction: column;
   width: 100%
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -48,7 +48,7 @@ const FlexInput = styled.input`
   text-align: center;
   width: 80%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     width: 40%;
   }
 `;
@@ -62,7 +62,7 @@ const FullWidthInput = styled.input`
   text-align: center;
   width: 80%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     margin: 12px;
     width: 75%;
   }
@@ -76,7 +76,7 @@ const PositionSelect = styled.select`
   text-align: center;
   width: 80%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     width: 43%;
   }
 `;
@@ -94,7 +94,7 @@ const PayWithWrapper = styled.div`
   height: 40px;
   justify-content: center;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     font-size: 16px;
   }
 `;
@@ -124,7 +124,7 @@ const PaymentReminder = styled.p`
 const VenmoSpan = styled.span`
   width: 50px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     width: unset;
   }
 `;

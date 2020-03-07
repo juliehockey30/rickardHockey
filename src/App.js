@@ -10,14 +10,14 @@ import Contact from './components/contact/Contact.js';
 class App extends Component {
   constructor(props){
     super(props);
-    this.isMobile = window.innerWidth <= 1024;
+    this.isMobile = window.innerWidth <= 768;
 
     this.scrollToElement = this.scrollToElement.bind(this);
   }
 
   scrollToElement(id) {
     const element = document.getElementById(id);
-    const offset = window.innerWidth <= 768 ? 50 : 100;
+    const offset = window.innerWidth <= 1024 ? 50 : 100;
     const bodyRect = document.body.getBoundingClientRect().top;
     const elementRect = element.getBoundingClientRect().top;
     const elementPosition = elementRect - bodyRect;

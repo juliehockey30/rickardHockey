@@ -32,7 +32,7 @@ const ModalContent = styled.div`
   position: absolute;
   width: 90%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     left: 15%;
     max-height: calc(100vh - 210px);
     padding: 24px;
@@ -55,7 +55,7 @@ const CloseIcon = styled.div`
   top:65px;
   width: 93%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     right: 130px;
     top: 113px;
     width: 73%;

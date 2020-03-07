@@ -5,7 +5,7 @@ const BackgroundImage = styled.img`
   width: 100%;
   margin-top: 15px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     margin-top: 0;
   }
 `;
@@ -21,9 +21,19 @@ const HomeObjective = styled.div`
   right: 7%;
   text-align: center;
   top: 140px;
-  width: 75%
+  width: 75%;
 
-  @media(min-width: 768px) {
+  @media(min-width: 768px) and (max-width: 1024px) {
+    border: 5px solid black;
+    color: black;
+    font-size: 24px;
+    padding: 24px;
+    right: 50px;
+    top: 100px;
+    width: 25%
+  }
+
+  @media(min-width: 1024px) {
     border: 5px solid black;
     color: black;
     font-size: 32px;

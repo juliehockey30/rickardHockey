@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 24px 0;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -22,7 +22,11 @@ const Background = styled.div`
   padding-left: 32px;
   padding-right: 32px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 768px) and (max-width: 1025px) {
+    font-size: 24px;
+  }
+
+  @media(min-width: 1025px) {
     font-size: 32px;
   }
 `;
@@ -42,7 +46,7 @@ const InstaLink = styled(SocialIcon)`
   margin-top: 12px;
   width: 40px !important;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     height: 50px !important;
     width: 50px !important;
   }

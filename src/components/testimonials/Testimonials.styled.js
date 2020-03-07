@@ -22,7 +22,13 @@ const TestimonialsHeader = styled.p`
   text-align: center;
   width: max-content;
 
-  @media(min-width: 768px) {
+  @media(min-width: 769px) and (max-width: 1025px) {
+    font-size: 50px;
+    margin: 0 auto 48px auto;
+    max-width: unset;
+  }
+
+  @media(min-width: 1025px) {
     font-size: 54px;
     margin: 0 auto 48px auto;
     max-width: unset;
@@ -34,7 +40,7 @@ const TestimonyWrapper = styled.div`
   margin: 24px 0;
   padding: 24px;
 
-  @media(min-width: 768px) {
+  @media(min-width: 1024px) {
     margin: 24px;
   }
 `;
